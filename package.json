@@ -1,0 +1,7 @@
+{
+  "name": "Flashcard-Generator",
+  "version": "0.0.1",
+  "dependencies": {
+    "inquirer": "latest"
+  }
+}
