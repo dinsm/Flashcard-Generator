@@ -20,7 +20,12 @@ var ClozeCard = require('./ClozeCard.js');
         } else if (answer.command === 'show-all-cards') {
             showCards();
         }
-    });
+    })
+    //.catch(function(answer) {
+       // console.log("it's ok!");
+    //})
+    ;
+
 
 var addCard = function() {
     // get user input
@@ -64,7 +69,7 @@ var addCard = function() {
                 newBasic.create();
                 nextStep();
             });
-        } else if (answer.answer === 'cloze-flashcard') {
+        } else if (answer.TypeOfCard === 'cloze-flashcard') {
             inquirer.prompt([{
                 name: 'text',
                 message: 'What is the full text?',
@@ -101,6 +106,9 @@ var addCard = function() {
                     addCard();
                 }
             });
+                //.catch(function(answer) {
+               // console.log("it's ok");
+            // })
         }
     });
 };
